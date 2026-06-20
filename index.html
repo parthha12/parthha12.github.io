@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jot — Capture anything. Get it back when it matters.</title>
+  <meta name="description" content="Jot is three brothers on your Mac — Jacquavius learns, Octavius resurfaces, Taquavion organizes. Local-first scratchpad with memory." />
+  <meta property="og:title" content="Jot — The J·O·T Crew" />
+  <meta property="og:description" content="Capture anything. Get it back when it matters. Meet Jacquavius, Octavius, and Taquavion." />
+  <meta property="og:image" content="assets/jot-icon-512.png" />
+  <meta name="theme-color" content="#0a0812" />
+  <link rel="icon" href="assets/jot-icon-512.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <img src="assets/jot-logo-full.png" alt="Jot" width="88" height="32" />
+    </a>
+    <div class="nav-links">
+      <a href="#crew">The Crew</a>
+      <a href="#workflow">How it works</a>
+      <a href="#features">Features</a>
+      <a href="https://github.com/parthha12/jot" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a href="#download" class="nav-cta">Download for Mac</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content reveal">
+      <p class="hero-eyebrow">Local-first · macOS · Private</p>
+      <h1 class="hero-title">
+        <span class="hero-line">Capture anything.</span>
+        <span class="hero-line hero-line-accent">Get it back when it matters.</span>
+      </h1>
+      <p class="hero-sub">
+        Jot isn't one assistant. It's three brothers who work together —
+        and their names <em>are</em> the product.
+      </p>
+      <div class="hero-acronym">
+        <span class="letter letter-j" data-persona="jacquavius">J</span>
+        <span class="acronym-dot">·</span>
+        <span class="letter letter-o" data-persona="octavius">O</span>
+        <span class="acronym-dot">·</span>
+        <span class="letter letter-t" data-persona="taquavion">T</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for Mac
+        </a>
+        <a href="#crew" class="btn btn-ghost">Meet the crew</a>
+      </div>
+      <p class="hero-note">No account. No subscription. Your notes stay on your Mac.</p>
+    </div>
+
+    <div class="hero-crew reveal reveal-delay-2">
+      <div class="crew-orbit">
+        <article class="orbit-card orbit-j" data-persona="jacquavius">
+          <div class="orbit-glow"></div>
+          <img src="assets/jacquavius-avatar.png" alt="Jacquavius" width="120" height="120" />
+          <span class="orbit-name">Jacquavius</span>
+          <span class="orbit-role">Learn</span>
+        </article>
+        <article class="orbit-card orbit-o" data-persona="octavius">
+          <div class="orbit-glow"></div>
+          <img src="assets/octavius-avatar.png" alt="Octavius" width="120" height="120" />
+          <span class="orbit-name">Octavius</span>
+          <span class="orbit-role">Resurface</span>
+        </article>
+        <article class="orbit-card orbit-t" data-persona="taquavion">
+          <div class="orbit-glow"></div>
+          <img src="assets/taquavion-avatar.png" alt="Taquavion" width="120" height="120" />
+          <span class="orbit-name">Taquavion</span>
+          <span class="orbit-role">Organize</span>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <section class="section crew-section" id="crew">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The J·O·T Crew</span>
+        <h2 class="section-title">Three brothers.<br />One scratchpad.</h2>
+        <p class="section-desc">
+          Same house, different jobs. You talk to whoever fits the moment —
+          not a generic AI assistant.
+        </p>
+      </div>
+
+      <div class="crew-grid">
+        <article class="crew-card reveal" data-persona="jacquavius">
+          <div class="crew-card-top">
+            <span class="crew-letter">J</span>
+            <img src="assets/jacquavius-avatar.png" alt="" class="crew-avatar" width="96" height="96" />
+          </div>
+          <h3>Jacquavius</h3>
+          <p class="crew-headline">The c is for sophisticated.</p>
+          <p class="crew-bio">
+            Reads everything you captured and teaches it back plain. With the crew he's down-to-earth;
+            alone he's nerdy with a book. Rich, calm about it — still street if you look close.
+          </p>
+          <ul class="crew-traits">
+            <li>Read & teach</li>
+            <li>Explain your stash</li>
+            <li>Connect the thread</li>
+          </ul>
+          <p class="crew-tagline">"Meet you where you are."</p>
+        </article>
+
+        <article class="crew-card reveal reveal-delay-1" data-persona="octavius">
+          <div class="crew-card-top">
+            <span class="crew-letter">O</span>
+            <img src="assets/octavius-avatar.png" alt="" class="crew-avatar" width="96" height="96" />
+          </div>
+          <h3>Octavius</h3>
+          <p class="crew-headline">He watches. You get the note when it matters.</p>
+          <p class="crew-bio">
+            Keeps watch on app, screen, and time — then taps you when the note you delegated
+            is actually relevant. The corner overlay is his hand on your shoulder.
+          </p>
+          <ul class="crew-traits">
+            <li>App-open reminders</li>
+            <li>Timing & snooze</li>
+            <li>Policy feedback</li>
+          </ul>
+          <p class="crew-tagline">"I watch so you don't have to."</p>
+        </article>
+
+        <article class="crew-card reveal reveal-delay-2" data-persona="taquavion">
+          <div class="crew-card-top">
+            <span class="crew-letter">T</span>
+            <img src="assets/taquavion-avatar.png" alt="" class="crew-avatar" width="96" height="96" />
+          </div>
+          <h3>Taquavion</h3>
+          <p class="crew-headline">Secretary energy. Talk, don't tap.</p>
+          <p class="crew-bio">
+            The brother who closes the loop. After Jacquavius makes meaning and Octavius
+            handles timing, Taquavion files what stays — folders, library hygiene, standing rules.
+          </p>
+          <ul class="crew-traits">
+            <li>File & sort</li>
+            <li>Library cleanup</li>
+            <li>Standing rules</li>
+          </ul>
+          <p class="crew-tagline">"Say it, I'll handle it."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section workflow-section" id="workflow">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The workflow</span>
+        <h2 class="section-title">Learn → Resurface → Organize</h2>
+        <p class="section-desc">
+          Every capture runs three beats — in <strong>J·O·T</strong> order.
+          Jacquavius makes meaning. Octavius brings it back. Taquavion files what stays.
+          Enter anywhere; chat routes you to whoever fits.
+        </p>
+      </div>
+
+      <div class="workflow-track reveal">
+        <div class="workflow-step" data-step="learn">
+          <div class="workflow-icon">J</div>
+          <div class="workflow-content">
+            <h3>Learn</h3>
+            <p class="workflow-who">Jacquavius</p>
+            <p>"What does this note mean?" "Walk me through this." He reads what you captured, connects the thread, teaches it back plain.</p>
+          </div>
+        </div>
+        <div class="workflow-arrow" aria-hidden="true">→</div>
+        <div class="workflow-step" data-step="resurface">
+          <div class="workflow-icon">O</div>
+          <div class="workflow-content">
+            <h3>Resurface</h3>
+            <p class="workflow-who">Octavius</p>
+            <p>"Remind me when I open GitHub." "Snooze this." He watches app, screen, and time — taps you when the note actually matters.</p>
+          </div>
+        </div>
+        <div class="workflow-arrow" aria-hidden="true">→</div>
+        <div class="workflow-step" data-step="organize">
+          <div class="workflow-icon">T</div>
+          <div class="workflow-content">
+            <h3>Organize</h3>
+            <p class="workflow-who">Taquavion</p>
+            <p>"File this in Research." "Split my folders." After the moment passes, library hygiene and standing rules keep the house honest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section showcase-section">
+    <div class="container">
+      <div class="showcase-wrap reveal">
+        <div class="showcase-glow"></div>
+        <img
+          src="assets/jot-app-notes-screenshot.png"
+          alt="Jot app — notes list, folders, and J.O.T. Crew sidebar with Jacquavius, Octavius, and Taquavion"
+          class="showcase-img"
+          width="1024"
+          height="721"
+          loading="lazy"
+        />
+      </div>
+      <p class="showcase-caption reveal">Notes · Folders · J·O·T Crew — all on your Mac.</p>
+    </div>
+  </section>
+
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What ships</span>
+        <h2 class="section-title">Memory that respects your attention</h2>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <span class="feature-key">⌘N</span>
+          <h3>Capture</h3>
+          <p>Text, screenshot, or delegated reminder in one keystroke.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-1">
+          <span class="feature-key">⌘P</span>
+          <h3>Find</h3>
+          <p>Search every note instantly — offline, no cloud sync.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-2">
+          <span class="feature-key">⌘⇧R</span>
+          <h3>Recall</h3>
+          <p>Manual nudge anytime. Octavius surfaces one calm card — everything else stays silent.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="feature-key">⌘⇧P</span>
+          <h3>Crew chat</h3>
+          <p>Talk to Jacquavius, Octavius, or Taquavion. They act — file, explain, resurface.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-1">
+          <span class="feature-key">Screen</span>
+          <h3>Screen memory</h3>
+          <p>OCR index of what you've seen. Find words on your screen from weeks ago.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-2">
+          <span class="feature-key">Local</span>
+          <h3>Local-first</h3>
+          <p>No account. No subscription. Your data stays on your Mac — never leaves the device.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section quote-section">
+    <div class="container">
+      <blockquote class="manifesto-quote reveal">
+        <p>
+          The policy decides <em>whether</em> to surface.
+          The three brothers live in chat and tool use —
+          not in whether a reminder fires.
+        </p>
+        <footer>
+          <a href="https://github.com/parthha12/jot/blob/main/docs/MANIFESTO.md" target="_blank" rel="noopener">Read the manifesto →</a>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section download-section" id="download">
+    <div class="container">
+      <div class="download-card reveal">
+        <div class="download-content">
+          <h2>Ready to jot?</h2>
+          <p>For Mac. Builds are shared with repo collaborators only — drag to Applications and meet the crew.</p>
+          <a href="https://github.com/parthha12/jot/releases/latest" class="btn btn-primary btn-lg" id="download-btn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Releases (collaborators)
+          </a>
+          <p class="download-meta">
+            <span id="version-label">Jot 2.7.2</span> · Private repo ·
+            <a href="https://github.com/parthha12/jot" target="_blank" rel="noopener">Collaborator access</a>
+          </p>
+        </div>
+        <div class="download-steps">
+          <h3>First 5 minutes</h3>
+          <ol>
+            <li>Download the <code>.dmg</code> and drag Jot to Applications</li>
+            <li>If macOS blocks it: <code>xattr -cr "/Applications/Jot.app"</code></li>
+            <li>Press <kbd>⌘N</kbd> to capture your first note</li>
+            <li>Press <kbd>⌘⇧P</kbd> to meet the crew</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/jot-logo-full.png" alt="Jot" width="72" height="26" />
+      <p class="footer-tagline">Capture anything. Get it back when it matters.</p>
+      <div class="footer-links">
+        <a href="https://github.com/parthha12/jot" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/parthha12/jot/blob/main/docs/GUIDE.md" target="_blank" rel="noopener">Guide</a>
+        <a href="https://github.com/parthha12/jot/blob/main/docs/MANIFESTO.md" target="_blank" rel="noopener">Manifesto</a>
+        <a href="https://github.com/parthha12/jot/releases/latest" target="_blank" rel="noopener">Releases</a>
+      </div>
+      <p class="footer-copy">Private · Local-first · Made for Mac</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
