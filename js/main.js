@@ -6,10 +6,10 @@
   const reveals = document.querySelectorAll('.reveal');
   const downloadBtn = document.getElementById('download-btn');
 
-  // Private repo — releases require collaborator login (no unauthenticated API fetch)
-  const REPO_RELEASES = 'https://github.com/parthha12/jot/releases/latest';
+  // Public DMG downloads — source repo stays private
+  const PUBLIC_RELEASES = 'https://github.com/parthha12/jot-releases/releases/latest';
   if (downloadBtn) {
-    downloadBtn.href = REPO_RELEASES;
+    downloadBtn.href = PUBLIC_RELEASES;
     downloadBtn.setAttribute('target', '_blank');
     downloadBtn.setAttribute('rel', 'noopener');
   }
