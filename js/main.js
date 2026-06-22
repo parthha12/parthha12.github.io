@@ -1,17 +1,40 @@
 'use strict';
 
-/** Jot marketing site — scroll reveals, nav */
+/** Jot marketing site — scroll reveals, nav, public DMG download */
 (function () {
   const nav = document.getElementById('nav');
   const reveals = document.querySelectorAll('.reveal');
   const downloadBtn = document.getElementById('download-btn');
+  const versionLabel = document.getElementById('version-label');
 
-  const RELEASES = 'https://github.com/parthha12/jot/releases/latest';
-  if (downloadBtn) {
-    downloadBtn.href = RELEASES;
+  const PUBLIC_RELEASES = 'https://github.com/parthha12/jot-releases/releases/latest';
+  const RELEASES_API = 'https://api.github.com/repos/parthha12/jot-releases/releases/latest';
+
+  async function wireDownloadButton() {
+    if (!downloadBtn) return;
+    downloadBtn.href = PUBLIC_RELEASES;
     downloadBtn.setAttribute('target', '_blank');
     downloadBtn.setAttribute('rel', 'noopener');
+
+    try {
+      const res = await fetch(RELEASES_API);
+      if (!res.ok) throw new Error('release fetch failed');
+      const release = await res.json();
+      const dmg = (release.assets || []).find((a) => /\.dmg$/i.test(a.name || ''));
+      if (dmg?.browser_download_url) {
+        downloadBtn.href = dmg.browser_download_url;
+      } else if (release.html_url) {
+        downloadBtn.href = release.html_url;
+      }
+      if (versionLabel && release.tag_name) {
+        versionLabel.textContent = `Jot ${String(release.tag_name).replace(/^v/, '')}`;
+      }
+    } catch {
+      /* fallback href already set */
+    }
   }
+
+  void wireDownloadButton();
 
   function onScroll() {
     if (window.scrollY > 40) {
