@@ -377,6 +377,7 @@ a { color: inherit; text-decoration: none; }
 /* Keep J → O → T on one line everywhere */
 .jot-loop {
   white-space: nowrap;
+  display: inline-block;
 }
 
 .section-title {
