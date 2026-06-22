@@ -853,6 +853,56 @@ a { color: inherit; text-decoration: none; }
 
 .market-link a:hover { text-decoration: underline; }
 
+/* Three-line narrative */
+.narrative-section {
+  padding-top: 0;
+  padding-bottom: 48px;
+}
+
+.narrative-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.narrative-card {
+  padding: 28px;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(196, 161, 255, 0.06), var(--bg-elevated));
+  border: 1px solid var(--border);
+}
+
+.narrative-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
+.narrative-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.narrative-card kbd {
+  font-size: 0.8em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.narrative-card code {
+  font-size: 0.85em;
+  color: var(--text);
+}
+
 
 .footer-copy {
   font-size: 0.75rem;
@@ -888,7 +938,8 @@ a { color: inherit; text-decoration: none; }
 
   .crew-grid,
   .features-grid,
-  .market-grid {
+  .market-grid,
+  .narrative-grid {
     grid-template-columns: 1fr;
   }
 
