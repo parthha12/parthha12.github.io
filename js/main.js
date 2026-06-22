@@ -1,15 +1,14 @@
 'use strict';
 
-/** Jot marketing site — scroll reveals, nav (private repo; no public release API) */
+/** Jot marketing site — scroll reveals, nav */
 (function () {
   const nav = document.getElementById('nav');
   const reveals = document.querySelectorAll('.reveal');
   const downloadBtn = document.getElementById('download-btn');
 
-  // Public DMG downloads — source repo stays private
-  const PUBLIC_RELEASES = 'https://github.com/parthha12/jot-releases/releases/latest';
+  const RELEASES = 'https://github.com/parthha12/jot/releases/latest';
   if (downloadBtn) {
-    downloadBtn.href = PUBLIC_RELEASES;
+    downloadBtn.href = RELEASES;
     downloadBtn.setAttribute('target', '_blank');
     downloadBtn.setAttribute('rel', 'noopener');
   }
