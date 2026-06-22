@@ -38,6 +38,19 @@
 
   reveals.forEach((el) => observer.observe(el));
 
+  document.querySelectorAll('[data-showcase]').forEach((slot) => {
+    const img = slot.querySelector('img[data-filename]');
+    if (!img) return;
+    const filename = img.getAttribute('data-filename');
+    const probe = new Image();
+    probe.onload = () => {
+      img.src = `assets/${filename}`;
+      img.hidden = false;
+      slot.classList.add('is-loaded');
+    };
+    probe.src = `assets/${filename}`;
+  });
+
   document.querySelectorAll('.letter[data-persona]').forEach((letter) => {
     letter.addEventListener('click', () => {
       const id = letter.dataset.persona;

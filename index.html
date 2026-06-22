@@ -24,6 +24,7 @@
       <img src="assets/jot-logo-full.png" alt="Jot" width="88" height="32" />
     </a>
     <div class="nav-links">
+      <a href="#screenshots">Screenshots</a>
       <a href="#narrative">What is Jot</a>
       <a href="#crew">The Crew</a>
       <a href="#workflow">How it works</a>
@@ -239,36 +240,48 @@
     </div>
   </section>
 
-  <section class="section showcase-section">
+  <section class="section showcase-section" id="screenshots">
     <div class="container">
-      <div class="showcase-wrap reveal">
-        <div class="showcase-glow"></div>
-        <img
-          src="assets/jot-app-notes-screenshot.png"
-          alt="Jot app — notes list, folders, and J.O.T. Crew sidebar with Jacquavius, Octavius, and Taquavion"
-          class="showcase-img"
-          width="1024"
-          height="721"
-          loading="lazy"
-        />
+      <div class="section-header reveal">
+        <span class="section-tag">See it work</span>
+        <h2 class="section-title">Real prompts. Real resurfacing.</h2>
+        <p class="section-desc">
+          Capture a reminder once in Notes — when you open the matching app,
+          <strong>Taquavion</strong> surfaces one calm card and <strong>Octavius</strong> is right there to act on it.
+        </p>
       </div>
-      <p class="showcase-caption reveal">Notes · Folders · J·O·T Crew — all on your Mac.</p>
 
-      <div class="showcase-wrap showcase-wrap--crew reveal">
-        <div class="showcase-glow"></div>
-        <img
-          src="assets/jot-crew-routing-screenshot.png"
-          alt="Jot crew — Auto routes delete my empty folders to Octavius; task completes with library summary"
-          class="showcase-img"
-          width="1024"
-          height="721"
-          loading="lazy"
-        />
+      <div class="showcase-duo">
+        <figure class="showcase-slot reveal" data-showcase="note">
+          <div class="showcase-wrap">
+            <img
+              class="showcase-img"
+              data-filename="jot-resurface-note.png"
+              src="assets/jot-resurface-note.png"
+              alt="Jot note — remind me when I open Cursor to run npm test before push"
+              width="1024"
+              height="721"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>The jot in your library — <code>when I open Cursor, run npm test before push</code>.</figcaption>
+        </figure>
+
+        <figure class="showcase-slot reveal reveal-delay-1" data-showcase="overlay">
+          <div class="showcase-wrap">
+            <img
+              class="showcase-img"
+              data-filename="jot-resurface-overlay.png"
+              src="assets/jot-resurface-overlay.png"
+              alt="Jot resurface overlay — Octavius card when Cursor opens"
+              width="1024"
+              height="721"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>Open Cursor → one overlay. Octavius on the card; snooze, complete, or chat.</figcaption>
+        </figure>
       </div>
-      <p class="showcase-caption reveal">
-        <strong>Crew in action</strong> — say <code>delete my empty folders</code> in chat;
-        routing picks <strong>Octavius</strong>, runs the task, and returns results (4 folders deleted, library summary).
-      </p>
     </div>
   </section>
 
