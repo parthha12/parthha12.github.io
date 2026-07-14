@@ -15,19 +15,26 @@
     downloadBtn.href = PUBLIC_RELEASES;
     downloadBtn.setAttribute('target', '_blank');
     downloadBtn.setAttribute('rel', 'noopener');
+    const preferReminders = downloadBtn.dataset.preferReminders === '1';
 
     try {
       const res = await fetch(RELEASES_API);
       if (!res.ok) throw new Error('release fetch failed');
       const release = await res.json();
-      const dmg = (release.assets || []).find((a) => /\.dmg$/i.test(a.name || ''));
+      const assets = release.assets || [];
+      const remindersDmg = assets.find((a) => /JOT-Reminders.*\.dmg$/i.test(a.name || ''));
+      const anyDmg = assets.find((a) => /\.dmg$/i.test(a.name || ''));
+      const dmg = preferReminders ? remindersDmg || anyDmg : anyDmg;
       if (dmg?.browser_download_url) {
         downloadBtn.href = dmg.browser_download_url;
       } else if (release.html_url) {
         downloadBtn.href = release.html_url;
       }
       if (versionLabel && release.tag_name) {
-        versionLabel.textContent = `Jot ${String(release.tag_name).replace(/^v/, '')}`;
+        const ver = String(release.tag_name).replace(/^v/, '');
+        versionLabel.textContent = preferReminders
+          ? `J.O.T. Reminders ${ver}`
+          : `Jot ${ver}`;
       }
     } catch {
       /* fallback href already set */

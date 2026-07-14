@@ -1190,6 +1190,19 @@ a { color: inherit; text-decoration: none; }
   padding: 40px 36px;
 }
 
+.page-reminders .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .page-reminders .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .features-grid-compact {
     grid-template-columns: 1fr;
