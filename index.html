@@ -186,11 +186,50 @@
           <h3>One card</h3>
           <p>Policy caps noise. Manual recall anytime. Why-now chips when Taquavion delivers.</p>
         </article>
-        <article class="feature-card reveal">
+        <article class="feature-card reveal reveal-delay-1">
           <span class="feature-key">Local</span>
           <h3>Your Mac</h3>
           <p>Local-first. Optional screen sessions. Crew chat <kbd>⌘⇧P</kbd>. Find notes <kbd>⌘P</kbd>.</p>
         </article>
+        <article class="feature-card reveal reveal-delay-2">
+          <span class="feature-key">Drag</span>
+          <h3>Your proportions</h3>
+          <p>Resize folders, notes, editor, and crew chat with split handles — your layout sticks on this Mac.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section layout-section" id="layout">
+    <div class="container">
+      <div class="layout-duo">
+        <div class="layout-copy reveal">
+          <span class="section-tag">Your workspace</span>
+          <h2 class="section-title">Everything inside, your size</h2>
+          <p class="section-desc section-desc--left">
+            Jot is built from resizable portions — not a fixed dashboard. Drag the splits until
+            folders, search, your note list, editor, and the crew sidebar feel right for how you work.
+          </p>
+          <ul class="layout-points">
+            <li>Vertical split — folders &amp; search above, notes &amp; editor below</li>
+            <li>Horizontal split — main library beside the J·O·T crew chat</li>
+            <li>Text fields grow when you need more room — capture, editor, overlay chat</li>
+            <li>Proportions save locally — reopen Jot and your layout is still there</li>
+          </ul>
+        </div>
+        <figure class="showcase-slot reveal reveal-delay-1">
+          <div class="showcase-wrap">
+            <img
+              class="showcase-img"
+              src="assets/jot-app-notes-screenshot.png"
+              alt="Jot main window — resizable folders, notes list, and crew sidebar panels"
+              width="1400"
+              height="900"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>Three panels, two drag handles — make each portion yours.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -200,10 +239,32 @@
       <div class="download-card reveal">
         <div class="download-content">
           <h2>Ready to jot?</h2>
-          <p>Download for Mac. Press <kbd>⌘N</kbd> to capture, <kbd>⌘⇧P</kbd> to meet the crew.</p>
-          <a href="https://github.com/parthha12/jot-releases/releases/latest" class="btn btn-primary btn-lg" id="download-btn" target="_blank" rel="noopener" download>
+          <p class="download-lead">
+            macOS only. Read the install steps below first — Jot is not yet notarized with an Apple Developer ID,
+            so you will need one quick Terminal command after dragging the app to Applications.
+          </p>
+
+          <div class="download-steps">
+            <h3>Install (about 60 seconds)</h3>
+            <ol>
+              <li>Download the latest <code>Jot-*.dmg</code> using the button below.</li>
+              <li>Open the DMG and drag <strong>Jot</strong> into <strong>Applications</strong>.</li>
+              <li>
+                In <strong>Terminal</strong>, run this command (required until notarized builds ship):
+                <pre class="download-cmd"><code>xattr -cr "/Applications/Jot.app"</code></pre>
+              </li>
+              <li>Open <strong>Jot</strong> from Applications. Press <kbd>⌘N</kbd> to capture, <kbd>⌘⇧P</kbd> to meet the crew.</li>
+            </ol>
+            <p class="download-note">
+              macOS may say Jot is from an unidentified developer or that the app is damaged.
+              The Terminal step above clears that. No Terminal? Right-click Jot → <strong>Open</strong> → <strong>Open</strong>,
+              or use System Settings → Privacy &amp; Security → Open Anyway.
+            </p>
+          </div>
+
+          <a href="https://github.com/parthha12/jot-releases/releases/latest" class="btn btn-primary btn-lg" id="download-btn" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Download for Mac
+            Download DMG
           </a>
           <p class="download-meta">
             <span id="version-label">Jot</span> ·

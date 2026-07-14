@@ -785,10 +785,16 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 12px;
 }
 
-.download-content > p {
+.download-content > p,
+.download-lead {
   color: var(--text-muted);
   margin-bottom: 28px;
-  max-width: 360px;
+  max-width: 560px;
+}
+
+.download-lead {
+  font-size: 0.9375rem;
+  line-height: 1.65;
 }
 
 .download-meta {
@@ -830,6 +836,37 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   color: var(--text);
+}
+
+.download-steps {
+  margin-bottom: 28px;
+}
+
+.download-cmd {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.download-cmd code {
+  display: block;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: var(--cyan);
+  white-space: pre;
+}
+
+.download-note {
+  margin-top: 16px;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  max-width: 560px;
 }
 
 /* Footer */
@@ -1021,7 +1058,8 @@ a { color: inherit; text-decoration: none; }
     padding: 36px 28px;
   }
 
-  .download-content > p { max-width: none; }
+  .download-content > p,
+  .download-lead { max-width: none; }
 
   .workflow-arrow { display: none; }
 
@@ -1111,18 +1149,55 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
 }
 
+/* Layout customization */
+.layout-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.section-desc--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.layout-points {
+  list-style: none;
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.layout-points li {
+  position: relative;
+  padding-left: 1.4em;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.layout-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
 .download-section .download-card {
   grid-template-columns: 1fr;
   padding: 40px 36px;
 }
 
-.download-section .download-steps {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .features-grid-compact {
     grid-template-columns: 1fr;
+  }
+
+  .layout-duo {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .section {
