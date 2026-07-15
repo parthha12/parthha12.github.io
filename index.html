@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jot — Capture anything. Get it back when it matters.</title>
-  <meta name="description" content="AI reminders on Mac — capture once, resurface when screen context matches. Time, visible text, app, site, and more. Local-first J·O·T crew." />
-  <meta property="og:title" content="Jot — AI reminders at the right moment" />
-  <meta property="og:description" content="Prompt-based AI reminders — not calendar pings. Jot resurfaces one calm card when time, screen context, or your prompt matches." />
+  <title>Jot — two apps · Reminders &amp; Workspace</title>
+  <meta name="description" content="Jot ships two macOS apps: J.O.T. Reminders (public download — AI reminders only) and Jot Workspace (full platform — crew chat, agents, recordings)." />
+  <meta property="og:title" content="Jot — J.O.T. Reminders &amp; Jot Workspace" />
+  <meta property="og:description" content="Two products. Reminders for quick NLP resurfacing. Workspace for the full J·O·T platform." />
   <meta property="og:image" content="assets/jot-icon-512.png" />
   <meta name="theme-color" content="#0a0812" />
   <link rel="icon" href="assets/jot-icon-512.png" type="image/png" />
@@ -15,268 +15,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="page-hub">
   <div class="grain" aria-hidden="true"></div>
   <div class="mesh" aria-hidden="true"></div>
 
   <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <img src="assets/jot-logo-full.png" alt="Jot" width="88" height="32" />
     </a>
     <div class="nav-links">
-      <a href="#screenshots">Screenshots</a>
-      <a href="#crew">Crew</a>
-      <a href="#features">Features</a>
-      <a href="reminders.html">J.O.T. Reminders</a>
-      <a href="#download">Download</a>
+      <a href="reminders.html">Reminders</a>
+      <a href="workspace.html">Workspace</a>
+      <a href="https://github.com/parthha12/jot-releases/releases/latest" target="_blank" rel="noopener">Releases</a>
     </div>
-    <a href="reminders.html#download" class="nav-cta">Get Reminders</a>
+    <a href="reminders.html#download" class="nav-cta">Download Reminders</a>
   </nav>
 
   <header class="hero hero-compact">
     <div class="hero-content reveal">
-      <p class="hero-eyebrow">Local-first · macOS · AI reminders</p>
+      <p class="hero-eyebrow">Local-first · macOS · Two products</p>
       <h1 class="hero-title">
-        <span class="hero-line">Capture anything.</span>
-        <span class="hero-line hero-line-accent">Get it back when it matters.</span>
+        <span class="hero-line">Jot</span>
+        <span class="hero-line hero-line-accent">Two apps. One brand.</span>
       </h1>
       <p class="hero-sub">
-        Say <em>when</em> in plain language. Jot resurfaces <strong>one calm card</strong> when
-        <strong>screen context</strong> matches — time, visible text, app, site, and more.
-        Not calendar noise. Not “which window is frontmost.” The <strong>right moment</strong>.
+        <strong>J.O.T. Reminders</strong> is the public download — quick capture and natural-language reminders.
+        <strong>Jot Workspace</strong> is the full platform — crew chat, agents, recordings, and the whole library.
       </p>
-      <div class="hero-acronym">
-        <span class="letter letter-j" data-persona="jacquavius">J</span>
+      <div class="hero-acronym" aria-hidden="true">
+        <span class="letter letter-j">J</span>
         <span class="acronym-dot">·</span>
-        <span class="letter letter-o" data-persona="octavius">O</span>
+        <span class="letter letter-o">O</span>
         <span class="acronym-dot">·</span>
-        <span class="letter letter-t" data-persona="taquavion">T</span>
+        <span class="letter letter-t">T</span>
       </div>
-      <div class="hero-actions">
-        <a href="reminders.html#download" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Get J.O.T. Reminders
-        </a>
-        <a href="#screenshots" class="btn btn-ghost">See it work</a>
-      </div>
-      <p class="hero-note">No account · your Mac only · new context triggers ship often</p>
-    </div>
-
-    <div class="hero-crew reveal reveal-delay-2">
-      <div class="crew-orbit">
-        <article class="orbit-card orbit-j" data-persona="jacquavius">
-          <div class="orbit-glow"></div>
-          <img src="assets/jacquavius-avatar.png" alt="Jacquavius" width="120" height="120" />
-          <span class="orbit-name">Jacquavius</span>
-          <span class="orbit-role">Organize</span>
-        </article>
-        <article class="orbit-card orbit-o" data-persona="octavius">
-          <div class="orbit-glow"></div>
-          <img src="assets/octavius-avatar.png" alt="Octavius" width="120" height="120" />
-          <span class="orbit-name">Octavius</span>
-          <span class="orbit-role">Interact</span>
-        </article>
-        <article class="orbit-card orbit-t" data-persona="taquavion">
-          <div class="orbit-glow"></div>
-          <img src="assets/taquavion-avatar.png" alt="Taquavion" width="120" height="120" />
-          <span class="orbit-name">Taquavion</span>
-          <span class="orbit-role">Resurface</span>
-        </article>
-      </div>
+      <p class="hero-note">Pick the product that matches how you work</p>
     </div>
   </header>
 
-  <section class="section showcase-section" id="screenshots">
+  <section class="section" id="products">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">See it work</span>
-        <h2 class="section-title">AI reminders, right moment.</h2>
-        <p class="section-desc">
-          Capture once. When <strong>context matches</strong>, Taquavion surfaces one card;
-          Octavius is on it to snooze, complete, or chat. Triggers include time, on-screen text,
-          app, site — and we're adding more constantly.
-        </p>
-      </div>
-
-      <div class="showcase-duo">
-        <figure class="showcase-slot reveal" data-showcase="note">
-          <div class="showcase-wrap">
-            <img
-              class="showcase-img"
-              data-filename="jot-resurface-note.png"
-              src="assets/jot-resurface-note.png"
-              alt="Jot note with a when-context prompt"
-              width="1024"
-              height="721"
-              loading="lazy"
-            />
-          </div>
-          <figcaption>The prompt in your library — one of many trigger types.</figcaption>
-        </figure>
-
-        <figure class="showcase-slot reveal reveal-delay-1" data-showcase="overlay">
-          <div class="showcase-wrap">
-            <img
-              class="showcase-img"
-              data-filename="jot-resurface-overlay.png"
-              src="assets/jot-resurface-overlay.png"
-              alt="Jot resurface overlay when context matches"
-              width="1024"
-              height="721"
-              loading="lazy"
-            />
-          </div>
-          <figcaption>Context matches → one overlay. Silence until then.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section crew-section crew-section-compact" id="crew">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag jot-loop">J → O → T</span>
-        <h2 class="section-title">Three brothers. One chat door.</h2>
-        <p class="section-desc">
-          Jot is <strong>prompt-based reminders</strong>. Say <em>when</em> in plain language —
-          the crew runs <span class="jot-loop"><strong>J&nbsp;→&nbsp;O&nbsp;→&nbsp;T</strong></span>:
-          Jacquavius organizes, Octavius interacts, Taquavion resurfaces.
-        </p>
-      </div>
-
-      <div class="crew-grid crew-grid-compact">
-        <article class="crew-card crew-card-compact reveal" data-persona="jacquavius">
-          <img src="assets/jacquavius-avatar.png" alt="" class="crew-avatar" width="72" height="72" />
-          <h3>Jacquavius <span class="crew-letter-inline">J</span></h3>
-          <p class="crew-bio">Capture prompts, file notes, set triggers.</p>
-        </article>
-        <article class="crew-card crew-card-compact reveal reveal-delay-1" data-persona="octavius">
-          <img src="assets/octavius-avatar.png" alt="" class="crew-avatar" width="72" height="72" />
-          <h3>Octavius <span class="crew-letter-inline">O</span></h3>
-          <p class="crew-bio">Explain, browse, chat on resurfaced cards.</p>
-        </article>
-        <article class="crew-card crew-card-compact reveal reveal-delay-2" data-persona="taquavion">
-          <img src="assets/taquavion-avatar.png" alt="" class="crew-avatar" width="72" height="72" />
-          <h3>Taquavion <span class="crew-letter-inline">T</span></h3>
-          <p class="crew-bio">Watch context; surface one card when it matches.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section features-section" id="features">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">What ships</span>
-        <h2 class="section-title">Context-aware, not another inbox</h2>
-      </div>
-
-      <div class="features-grid features-grid-compact">
-        <article class="feature-card reveal">
-          <span class="feature-key">⌘N</span>
-          <h3>Capture &amp; prompt</h3>
-          <p>Text, screenshot, or delegated <em>when</em> — time, screen phrase, app, site.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-1">
-          <span class="feature-key">App + URL</span>
-          <h3>Context that fits</h3>
-          <p>Frontmost app and browser tab URL — resurface when what you're doing matches your prompt.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-2">
-          <span class="feature-key">⌘⇧R</span>
-          <h3>One card</h3>
-          <p>Policy caps noise. Manual recall anytime. Why-now chips when Taquavion delivers.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-1">
-          <span class="feature-key">Local</span>
-          <h3>Your Mac</h3>
-          <p>Local-first. Optional screen sessions. Crew chat <kbd>⌘⇧P</kbd>. Find notes <kbd>⌘P</kbd>.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-2">
-          <span class="feature-key">Drag</span>
-          <h3>Your proportions</h3>
-          <p>Resize folders, notes, editor, and crew chat with split handles — your layout sticks on this Mac.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section layout-section" id="layout">
-    <div class="container">
-      <div class="layout-duo">
-        <div class="layout-copy reveal">
-          <span class="section-tag">Your workspace</span>
-          <h2 class="section-title">Everything inside, your size</h2>
-          <p class="section-desc section-desc--left">
-            Jot is built from resizable portions — not a fixed dashboard. Drag the splits until
-            folders, search, your note list, editor, and the crew sidebar feel right for how you work.
+      <div class="product-chooser reveal">
+        <article class="product-card product-card--reminders">
+          <p class="product-kicker">Public download</p>
+          <h2>J.O.T. Reminders</h2>
+          <p class="product-lead">
+            AI reminders only. Quick capture, say <em>when</em> in plain English, resurface when time or app matches.
+            No recordings tab. No agent dashboard. Just reminders.
           </p>
-          <ul class="layout-points">
-            <li>Vertical split — folders &amp; search above, notes &amp; editor below</li>
-            <li>Horizontal split — main library beside the J·O·T crew chat</li>
-            <li>Text fields grow when you need more room — capture, editor, overlay chat</li>
-            <li>Proportions save locally — reopen Jot and your layout is still there</li>
+          <ul class="product-list">
+            <li>NLP reminders (“tomorrow at 9”, “when I open Slack”)</li>
+            <li>Calm overlay when it matters</li>
+            <li>Free macOS DMG on GitHub Releases</li>
           </ul>
-        </div>
-        <figure class="showcase-slot reveal reveal-delay-1">
-          <div class="showcase-wrap">
-            <img
-              class="showcase-img"
-              src="assets/jot-app-notes-screenshot.png"
-              alt="Jot main window — resizable folders, notes list, and crew sidebar panels"
-              width="1400"
-              height="900"
-              loading="lazy"
-            />
+          <div class="product-actions">
+            <a href="reminders.html" class="btn btn-primary">Open Reminders</a>
+            <a href="reminders.html#download" class="btn btn-ghost">Download DMG</a>
           </div>
-          <figcaption>Three panels, two drag handles — make each portion yours.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <section class="section download-section" id="download">
-    <div class="container">
-      <div class="download-card reveal">
-        <div class="download-content">
-          <h2>Ready to jot?</h2>
-          <p class="download-lead">
-            macOS only. Read the install steps below first — Jot is not yet notarized with an Apple Developer ID,
-            so you will need one quick Terminal command after dragging the app to Applications.
+        <article class="product-card product-card--workspace">
+          <p class="product-kicker">Full platform</p>
+          <h2>Jot Workspace</h2>
+          <p class="product-lead">
+            The huge Jot platform — J·O·T crew chat, agents, notes library, folders, screen &amp; camera recordings,
+            and context-aware resurfacing. Built for deep daily use.
           </p>
-
-          <div class="download-steps">
-            <h3>Install (about 60 seconds)</h3>
-            <ol>
-              <li>Download the latest <code>Jot-*.dmg</code> using the button below.</li>
-              <li>Open the DMG and drag <strong>Jot</strong> into <strong>Applications</strong>.</li>
-              <li>
-                In <strong>Terminal</strong>, run this command (required until notarized builds ship):
-                <pre class="download-cmd"><code>xattr -cr "/Applications/Jot.app"</code></pre>
-              </li>
-              <li>Open <strong>Jot</strong> from Applications. Press <kbd>⌘N</kbd> to capture, <kbd>⌘⇧P</kbd> to meet the crew.</li>
-            </ol>
-            <p class="download-note">
-              macOS may say Jot is from an unidentified developer or that the app is damaged.
-              The Terminal step above clears that. No Terminal? Right-click Jot → <strong>Open</strong> → <strong>Open</strong>,
-              or use System Settings → Privacy &amp; Security → Open Anyway.
-            </p>
+          <ul class="product-list">
+            <li>Crew chat &amp; agent routing (J → O → T)</li>
+            <li>Recordings + OCR search</li>
+            <li>Full library, folders, organize tools</li>
+          </ul>
+          <div class="product-actions">
+            <a href="workspace.html" class="btn btn-primary">Explore Workspace</a>
+            <a href="reminders.html#download" class="btn btn-ghost">Get Reminders first</a>
           </div>
-
-          <p class="download-lead" style="margin-bottom: 1rem;">
-            Want the simplified public app? Go to
-            <a href="reminders.html#download" style="color: var(--cyan); text-decoration: underline;">J.O.T. Reminders</a>
-            for the AI-reminders-only build, install steps, and DMG.
-          </p>
-          <a href="reminders.html#download" class="btn btn-primary btn-lg" id="download-btn" data-prefer-reminders="1" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Get J.O.T. Reminders
-          </a>
-          <p class="download-meta">
-            <span id="version-label">J.O.T. Reminders</span> ·
-            <a href="https://github.com/parthha12/jot-releases/releases/latest" target="_blank" rel="noopener">All releases</a>
-          </p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -284,13 +98,13 @@
   <footer class="footer">
     <div class="container footer-inner">
       <img src="assets/jot-logo-full.png" alt="Jot" width="72" height="26" />
-      <p class="footer-tagline">AI reminders when context matches — not when the calendar says so.</p>
+      <p class="footer-tagline">J.O.T. Reminders · Jot Workspace</p>
       <div class="footer-links">
-        <a href="#download">Download</a>
-        <a href="#features">Features</a>
+        <a href="reminders.html">Reminders</a>
+        <a href="workspace.html">Workspace</a>
         <a href="https://github.com/parthha12/jot-releases/releases/latest" target="_blank" rel="noopener">Releases</a>
       </div>
-      <p class="footer-copy">Private · Local-first · Made for Mac</p>
+      <p class="footer-copy">Private source · Public Reminders downloads · Made for Mac</p>
     </div>
   </footer>
 
