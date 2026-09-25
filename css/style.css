@@ -248,16 +248,27 @@ footer {
   border-bottom: 1px solid var(--line);
 }
 
-.agent-active img {
-  width: 72px;
-  height: 72px;
+.crew-faces {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.agent-active img,
+.crew-faces img {
+  width: 36px;
+  height: 36px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid var(--crew);
   background: var(--elevated);
   flex-shrink: 0;
 }
+
+.crew-faces img:nth-child(1) { border-color: var(--j); }
+.crew-faces img:nth-child(2) { border-color: var(--o); }
+.crew-faces img:nth-child(3) { border-color: var(--t); }
 
 .agent-active img[data-persona="jacquavius"] { border-color: var(--j); }
 .agent-active img[data-persona="octavius"] { border-color: var(--o); }

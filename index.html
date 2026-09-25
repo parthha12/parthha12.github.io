@@ -20,7 +20,7 @@
 
     <figure class="hero-shot">
       <img src="assets/jot-workspace-screenshot.png" alt="Jot Workspace — notes library on the left, J·O·T crew chat on the right" width="1024" height="746" />
-      <figcaption>Jot Workspace 2.7.5 — folders, notes, and Jacquavius · Octavius · Taquavion in one window.</figcaption>
+      <figcaption>Jot Workspace 2.7.6 — folders, notes, and the Jot crew in one window.</figcaption>
     </figure>
 
     <section class="products" aria-label="Products">
@@ -37,30 +37,21 @@
     <section class="crew-try" id="crew" aria-labelledby="crew-heading">
       <h2 id="crew-heading">Try the crew</h2>
       <p>
-        Talk to <strong>Jacquavius</strong> (organize), <strong>Octavius</strong> (interact),
-        and <strong>Taquavion</strong> (resurface). Browser demo — routing is real;
-        replies show what each brother would do in the Mac apps.
+        Talk to the <strong>Jot crew</strong>. Jacquavius, Octavius, and Taquavion are three brothers
+        who work as one. Browser demo — replies show what the crew would do in the Mac apps.
       </p>
 
       <div class="agent-panel" id="agent-panel">
         <div class="agent-active" id="agent-active">
-          <img id="active-face" src="assets/octavius-avatar.png" alt="" width="72" height="72" />
-          <div>
-            <p class="active-name" id="active-name">Octavius</p>
-            <p class="route-hint" id="route-hint" aria-live="polite">Auto — routes by what you type</p>
+          <div class="crew-faces" aria-hidden="true">
+            <img src="assets/jacquavius-avatar.png" alt="" width="36" height="36" />
+            <img src="assets/octavius-avatar.png" alt="" width="36" height="36" />
+            <img src="assets/taquavion-avatar.png" alt="" width="36" height="36" />
           </div>
-        </div>
-        <div class="agent-picks" role="group" aria-label="Choose brother or auto-route">
-          <button type="button" class="pick is-active" data-pick="auto" aria-pressed="true">Auto</button>
-          <button type="button" class="pick" data-pick="jacquavius" aria-pressed="false">
-            <img src="assets/jacquavius-avatar.png" alt="" width="24" height="24" /> Jacquavius
-          </button>
-          <button type="button" class="pick" data-pick="octavius" aria-pressed="false">
-            <img src="assets/octavius-avatar.png" alt="" width="24" height="24" /> Octavius
-          </button>
-          <button type="button" class="pick" data-pick="taquavion" aria-pressed="false">
-            <img src="assets/taquavion-avatar.png" alt="" width="24" height="24" /> Taquavion
-          </button>
+          <div>
+            <p class="active-name" id="active-name">Jot crew</p>
+            <p class="route-hint" id="route-hint">Three brothers. One chat.</p>
+          </div>
         </div>
         <div class="agent-chat" id="agent-chat" aria-live="polite" aria-label="Crew conversation"></div>
         <form class="agent-compose" id="agent-form">
@@ -98,7 +89,7 @@
       <h2 id="workspace-look-h"><a href="workspace.html">Jot Workspace</a> — <mark>$20/month</mark></h2>
       <p>
         The full platform: folders, notes, crew chat, screen &amp; camera recordings.
-        Same brothers — Jacquavius files, Octavius talks, Taquavion delivers — inside a
+        The Jot crew — Jacquavius, Octavius, and Taquavion together — inside a
         resizable three-panel workspace.
       </p>
       <ul class="insights">
