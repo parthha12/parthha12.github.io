@@ -1,111 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jot — Reminders free · Workspace $20/mo</title>
-  <meta name="description" content="Jot: AI reminders on Mac. J.O.T. Reminders is free. Jot Workspace is $20/month. Try the J·O·T crew in the browser." />
-  <meta name="theme-color" content="#1c1c1e" />
+  <meta name="description" content="Jot for Mac. J.O.T. Reminders is free. Jot Workspace is $20/month. Capture anything. Get it back when it matters." />
+  <meta name="theme-color" content="#0c0303" />
   <meta property="og:title" content="Jot — Capture anything. Get it back when it matters." />
   <meta property="og:description" content="J.O.T. Reminders is free. Jot Workspace is $20/month — notes, crew chat, recordings." />
   <meta property="og:image" content="https://parthha12.github.io/assets/jot-workspace-screenshot.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/jot-icon-512.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="arise/theme.css" />
+  <link rel="stylesheet" href="arise/testimonials.css" />
+  <link rel="stylesheet" href="arise/booking.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <main class="page">
-    <h1>Jot</h1>
-    <p class="tagline">Capture anything. Get it back when it matters.</p>
+  <header class="hero dark-fallback" id="top">
+    <canvas class="silk silk-fade" data-silk="crimson" data-seed="4" data-scale="1.6" data-angle="-1.0" data-waves="3.2" aria-hidden="true"></canvas>
+    <div class="hero-top">
+      <nav class="hero-nav rise" style="--rd:.1s" aria-label="Main">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#crew">Crew</a></li>
+          <li><a href="#work">The app</a></li>
+          <li><a href="reminders.html">Download</a></li>
+        </ul>
+      </nav>
+      <a class="hero-brand rise" style="--rd:.2s" href="#top">Jot</a>
+      <a class="btn-talk rise" style="--rd:.3s" href="reminders.html">Download free</a>
+    </div>
+    <div class="hero-mid">
+      <div class="hero-tag rise" style="--rd:.45s">
+        <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 1.5 1.5 10.5M1.5 4v6.5H8" /></svg>
+        <p>Capture anything. Get it back when it matters.</p>
+      </div>
+    </div>
+    <h1 class="mark mark-in" data-fit><span>Jot</span></h1>
+    <div class="hero-bar rise" style="--rd:.9s">
+      <a href="#products">Scroll down</a>
+      <time class="clock" data-clock> </time>
+      <span>Local-first · macOS</span>
+    </div>
+  </header>
 
-    <figure class="hero-shot">
-      <img src="assets/jot-workspace-screenshot.png" alt="Jot Workspace — notes library on the left, J·O·T crew chat on the right" width="1024" height="746" />
-      <figcaption>Jot Workspace 2.7.6 — folders, notes, and the Jot crew in one window.</figcaption>
-    </figure>
-
-    <section class="products" aria-label="Products">
-      <p class="hl">
-        <a href="reminders.html"><strong>J.O.T. Reminders</strong> — download free</a>
-      </p>
-      <p class="hl">
-        <a href="workspace.html"><strong>Jot Workspace</strong> — download for <mark>$20/month</mark></a>
-      </p>
-    </section>
-
-    <hr />
-
-    <section class="crew-try" id="crew" aria-labelledby="crew-heading">
-      <h2 id="crew-heading">Try the crew</h2>
-      <p>
-        Talk to the <strong>Jot crew</strong>. Jacquavius, Octavius, and Taquavion are three brothers
-        who work as one. Browser demo — replies show what the crew would do in the Mac apps.
-      </p>
-
-      <div class="agent-panel" id="agent-panel">
-        <div class="agent-active" id="agent-active">
-          <div class="crew-faces" aria-hidden="true">
-            <img src="assets/jacquavius-avatar.png" alt="" width="36" height="36" />
-            <img src="assets/octavius-avatar.png" alt="" width="36" height="36" />
-            <img src="assets/taquavion-avatar.png" alt="" width="36" height="36" />
-          </div>
-          <div>
-            <p class="active-name" id="active-name">Jot crew</p>
-            <p class="route-hint" id="route-hint">Three brothers. One chat.</p>
-          </div>
+  <main>
+    <section class="partners" id="partners" aria-label="How Jot works">
+      <div class="wrap">
+        <p class="partners-label" data-reveal>On your Mac</p>
+        <div class="logos" data-stagger>
+          <span class="l1">Local-first</span>
+          <span class="l2">macOS</span>
+          <span class="l3">⌘J</span>
+          <span class="l4">One card</span>
+          <span class="l5">The policy</span>
+          <span class="l6">No cloud</span>
         </div>
-        <div class="agent-chat" id="agent-chat" aria-live="polite" aria-label="Crew conversation"></div>
-        <form class="agent-compose" id="agent-form">
-          <label class="visually-hidden" for="agent-input">Message to the crew</label>
-          <textarea id="agent-input" rows="2" placeholder="Try: remind me tomorrow when I work…" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <p class="agent-examples">
-          Examples:
-          <button type="button" class="example" data-example="Remind me tomorrow at 9 to send the report">reminder</button>
-          <button type="button" class="example" data-example="Explain what mode 1 vs mode 2 means">explain</button>
-          <button type="button" class="example" data-example="Why did you surface that note? Surface less often.">policy</button>
-        </p>
       </div>
     </section>
 
-    <hr />
-
-    <section id="reminders-look" aria-labelledby="reminders-look-h">
-      <h2 id="reminders-look-h"><a href="reminders.html">J.O.T. Reminders</a> — <span class="free">free</span></h2>
-      <p>
-        One job: capture a <em>when</em> in plain English, get <strong>one calm card</strong> back
-        when time or app matches. No library maze — just capture → save → resurface.
-      </p>
-      <ul class="insights">
-        <li><strong>⌘J</strong> quick capture · optional screenshot</li>
-        <li>Natural language: “tomorrow at 9”, “when I open Slack”</li>
-        <li>Local-first · macOS · <a href="reminders.html"><strong>download free</strong></a></li>
-      </ul>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>What Jot is</span>
+        <h2 class="statement" id="about-title" data-split>Say when in plain English. One calm card comes back when the moment matches.</h2>
+        <div class="about-img wide" data-reveal>
+          <img src="assets/jot-workspace-screenshot.png" alt="Jot Workspace — notes library on the left, Jot crew chat on the right" width="1024" height="746" />
+        </div>
+        <p class="lede" data-reveal>Jacquavius, Octavius, and Taquavion are three brothers who work as one crew. You talk to the crew. The local policy decides whether anything interrupts you.</p>
+        <div data-reveal><a class="btn" href="#crew" data-magnetic>Try the crew <span class="ico"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" /></svg></span></a></div>
+      </div>
     </section>
 
-    <hr />
-
-    <section id="workspace-look" aria-labelledby="workspace-look-h">
-      <h2 id="workspace-look-h"><a href="workspace.html">Jot Workspace</a> — <mark>$20/month</mark></h2>
-      <p>
-        The full platform: folders, notes, crew chat, screen &amp; camera recordings.
-        The Jot crew — Jacquavius, Octavius, and Taquavion together — inside a
-        resizable three-panel workspace.
-      </p>
-      <ul class="insights">
-        <li>Crew chat <kbd>⌘⇧P</kbd> with real organize → interact → resurface loop</li>
-        <li>Notes library, search, light/dark theme, triggers, and recordings in one window</li>
-        <li>Built for people who outgrow “just reminders” — <a href="workspace.html"><strong>$20/month</strong></a></li>
-      </ul>
+    <section class="tbar" aria-labelledby="tbar-title">
+      <div class="tbar-head">
+        <span class="tbar-kicker">Say when</span>
+        <h2 class="tbar-title" id="tbar-title">Plain English, then one card</h2>
+        <span class="tbar-rating">Examples you can type. Nothing here is a customer review.</span>
+      </div>
+      <div class="tbar-viewport">
+        <div class="tbar-track">
+          <figure class="tcard"><div class="tcard-top"><span class="tcard-result">Tomorrow at 9</span></div><blockquote>Remind me tomorrow at 9 to send the report.</blockquote><figcaption><span class="tcard-av">T</span><div><b>Time</b><small>J.O.T. Reminders</small></div></figcaption></figure>
+          <figure class="tcard"><div class="tcard-top"><span class="tcard-result">When I open Slack</span></div><blockquote>When I open Slack, reply to the thread.</blockquote><figcaption><span class="tcard-av">A</span><div><b>App</b><small>J.O.T. Reminders</small></div></figcaption></figure>
+          <figure class="tcard"><div class="tcard-top"><span class="tcard-result">One calm card</span></div><blockquote>The policy surfaces one card, or it stays quiet.</blockquote><figcaption><span class="tcard-av">P</span><div><b>Policy</b><small>On your Mac</small></div></figcaption></figure>
+          <figure class="tcard"><div class="tcard-top"><span class="tcard-result">⌘J</span></div><blockquote>Capture the when without leaving the app you are in.</blockquote><figcaption><span class="tcard-av">J</span><div><b>Capture</b><small>macOS</small></div></figcaption></figure>
+          <figure class="tcard" aria-hidden="true"><div class="tcard-top"><span class="tcard-result">Tomorrow at 9</span></div><blockquote>Remind me tomorrow at 9 to send the report.</blockquote><figcaption><span class="tcard-av">T</span><div><b>Time</b><small>J.O.T. Reminders</small></div></figcaption></figure>
+          <figure class="tcard" aria-hidden="true"><div class="tcard-top"><span class="tcard-result">When I open Slack</span></div><blockquote>When I open Slack, reply to the thread.</blockquote><figcaption><span class="tcard-av">A</span><div><b>App</b><small>J.O.T. Reminders</small></div></figcaption></figure>
+          <figure class="tcard" aria-hidden="true"><div class="tcard-top"><span class="tcard-result">One calm card</span></div><blockquote>The policy surfaces one card, or it stays quiet.</blockquote><figcaption><span class="tcard-av">P</span><div><b>Policy</b><small>On your Mac</small></div></figcaption></figure>
+          <figure class="tcard" aria-hidden="true"><div class="tcard-top"><span class="tcard-result">⌘J</span></div><blockquote>Capture the when without leaving the app you are in.</blockquote><figcaption><span class="tcard-av">J</span><div><b>Capture</b><small>macOS</small></div></figcaption></figure>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>
-        <a href="https://github.com/parthha12/jot-releases/releases/latest">Releases</a>
-        · Local-first · macOS
-      </p>
-    </footer>
+    <section class="services" id="products" aria-labelledby="svc-title">
+      <div class="wrap">
+        <div class="svc-head">
+          <div>
+            <span class="eyebrow" data-reveal>Two products</span>
+            <h2 class="h2" id="svc-title" data-split>Reminders are free. Workspace is the full Mac app.</h2>
+          </div>
+          <p data-reveal>Same crew. Same policy. Reminders captures a when. Workspace adds the library, recordings, and crew chat.</p>
+        </div>
+        <ul class="svc-list" data-stagger>
+          <li>
+            <a class="svc-row" href="reminders.html">
+              <span class="n">(01)</span>
+              <h3>J.O.T. Reminders</h3>
+              <div class="svc-body">
+                <p>Capture a when in plain English. When the time or app matches, one calm card comes back. Free for Mac.</p>
+                <div class="svc-tags"><span>Free</span><span>⌘J</span><span>Local-first</span></div>
+              </div>
+              <span class="svc-go" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" /></svg></span>
+            </a>
+          </li>
+          <li>
+            <a class="svc-row" href="workspace.html">
+              <span class="n">(02)</span>
+              <h3>Jot Workspace</h3>
+              <div class="svc-body">
+                <p>Folders, notes, crew chat, and screen and camera recordings in one window. $20/month.</p>
+                <div class="svc-tags"><span>$20/month</span><span>Crew chat</span><span>Recordings</span></div>
+              </div>
+              <span class="svc-go" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" /></svg></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="crew-block" id="crew" aria-labelledby="crew-heading">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Try the crew</span>
+        <h2 class="h2" id="crew-heading" data-split>Three brothers. One chat. This demo stays in the browser.</h2>
+        <p data-reveal>Jacquavius organizes, Octavius explains, Taquavion watches the moment. Replies show what the crew would do in the Mac apps. Nothing is saved here.</p>
+        <div class="agent-panel" id="agent-panel">
+          <div class="agent-active">
+            <div class="crew-faces" aria-hidden="true">
+              <img src="assets/jacquavius-avatar.png" alt="" width="36" height="36" />
+              <img src="assets/octavius-avatar.png" alt="" width="36" height="36" />
+              <img src="assets/taquavion-avatar.png" alt="" width="36" height="36" />
+            </div>
+            <div>
+              <p class="active-name" id="active-name">Jot crew</p>
+              <p class="route-hint" id="route-hint">Three brothers. One chat.</p>
+            </div>
+          </div>
+          <div class="agent-chat" id="agent-chat" aria-live="polite" aria-label="Crew conversation"></div>
+          <form class="agent-compose" id="agent-form">
+            <label class="visually-hidden" for="agent-input">Message to the crew</label>
+            <textarea id="agent-input" rows="2" placeholder="Try: remind me tomorrow when I work…" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <p class="agent-examples">
+            Examples:
+            <button type="button" class="example" data-example="Remind me tomorrow at 9 to send the report">reminder</button>
+            <button type="button" class="example" data-example="Explain what mode 1 vs mode 2 means">explain</button>
+            <button type="button" class="example" data-example="Why did you surface that note? Surface less often.">policy</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 class="showcase-head" id="work-title" data-split>The Mac app, in three views</h2>
+        <div class="stack">
+          <a class="pcard" href="workspace.html" style="--i:0">
+            <div class="pcard-in shot" style="background-image:url(assets/jot-workspace-screenshot.png)">
+              <div class="chips"><span>Workspace</span><span>$20/month</span></div>
+              <div class="pcard-meta">
+                <div><b>Library and crew</b><small>Folders, notes, and chat</small></div>
+                <div class="stat"><b>$20</b><small>per month</small></div>
+              </div>
+            </div>
+          </a>
+          <a class="pcard" href="reminders.html" style="--i:1">
+            <div class="pcard-in shot" style="background-image:url(assets/jot-resurface-overlay.png)">
+              <div class="chips"><span>Reminders</span><span>Free</span></div>
+              <div class="pcard-meta">
+                <div><b>One calm card</b><small>When time or app matches</small></div>
+                <div class="stat"><b>Free</b><small>Mac download</small></div>
+              </div>
+            </div>
+          </a>
+          <a class="pcard" href="#crew" style="--i:2">
+            <div class="pcard-in shot" style="background-image:url(assets/jot-app-notes-screenshot.png)">
+              <div class="chips"><span>Notes</span><span>Local</span></div>
+              <div class="pcard-meta">
+                <div><b>Stays on your Mac</b><small>No cloud for capture</small></div>
+                <div class="stat"><b>⌘J</b><small>Quick capture</small></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="journey" aria-labelledby="journey-title">
+      <div class="wrap story-grid">
+        <div class="jpanel dark-fallback" data-reveal data-journey data-cycle data-active="0">
+          <canvas class="silk" data-silk="crimson" data-seed="2" data-scale="1.2" data-angle="-0.4" data-waves="2.4" aria-hidden="true"></canvas>
+          <div class="jcard">
+            <div class="jcard-head">J → O → T</div>
+            <div class="jcard-body">
+              <div class="jbrand">
+                <span class="jlogo" aria-hidden="true">
+                  <img src="assets/jot-icon-512.png" alt="" width="32" height="32" />
+                </span>
+                <div><b>Jot crew</b><small>Three brothers, one door</small></div>
+              </div>
+              <div class="timeline" role="list" aria-label="Crew loop">
+                <div class="jstep" role="listitem" data-detail="Jacquavius captures the prompt, files the note, and sets the when."><i></i><b>Organize</b><small>Jacquavius</small></div>
+                <div class="jstep" role="listitem" data-detail="Octavius explains what will fire and walks through the stash with you."><i></i><b>Interact</b><small>Octavius</small></div>
+                <div class="jstep" role="listitem" data-detail="Taquavion watches app, time, and screen. The policy delivers one card, or silence."><i></i><b>Resurface</b><small>Taquavion</small></div>
+              </div>
+              <p class="jdetail"></p>
+            </div>
+          </div>
+        </div>
+        <div class="story-side">
+          <div>
+            <span class="eyebrow" data-reveal>The loop</span>
+            <h2 class="h3" id="journey-title" data-split>You prompt. The crew splits the work. The policy decides the interrupt.</h2>
+            <div class="stats" data-reveal>
+              <div><b data-count>3</b><span>Brothers</span></div>
+              <div><b data-count>1</b><span>Card at a time</span></div>
+              <div><b data-count>$20</b><span>Workspace / month</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <section class="book" id="download" aria-labelledby="book-title">
+    <div class="book-wrap">
+      <div class="book-copy">
+        <span class="book-kicker">Get Jot</span>
+        <h2 class="book-title" id="book-title">Start with free Reminders</h2>
+        <p class="book-sub">J.O.T. Reminders is a free Mac download. Workspace is $20/month when you want the library, recordings, and crew chat.</p>
+        <ul class="book-points">
+          <li>Plain-English when: time, app, or screen</li>
+          <li>One calm card, silence by default</li>
+          <li>Local-first. Capture stays on your Mac</li>
+        </ul>
+      </div>
+      <div class="book-embed">
+        <div class="choices">
+          <a class="choice" id="download-btn" href="https://github.com/parthha12/jot-releases/releases/latest">
+            <b>Download J.O.T. Reminders</b>
+            <span id="version-label">Free · latest Mac build</span>
+          </a>
+          <a class="choice" href="workspace.html">
+            <b>Jot Workspace — $20/month</b>
+            <span>Crew chat, notes, recordings</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer dark-fallback" id="contact">
+    <canvas class="silk" data-silk="ember" data-seed="4" data-scale="1.3" data-angle="-1.0" data-waves="3.2" aria-hidden="true"></canvas>
+    <div class="fcard" data-grow>
+      <div class="ftop">
+        <div>
+          <h2 class="ftitle">Capture anything.</h2>
+          <p class="fcopy">© <span data-year>2026</span> Jot. Local-first on macOS.</p>
+          <p class="fcopy"><a class="btn-talk" href="reminders.html">Download free</a></p>
+        </div>
+        <nav class="flinks" aria-label="Footer">
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="reminders.html">J.O.T. Reminders</a></li>
+            <li><a href="workspace.html">Jot Workspace</a></li>
+            <li><a href="#crew">Crew</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://github.com/parthha12/jot-releases/releases/latest">Releases</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="mark fmark" data-fit aria-hidden="true"><span>Jot</span></p>
+    </div>
+  </footer>
+
+  <script src="arise/motion.js"></script>
+  <script src="arise/silk.js"></script>
+  <script src="arise/theme.js"></script>
   <script src="js/crew-demo.js"></script>
   <script src="js/main.js"></script>
 </body>

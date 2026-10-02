@@ -1,52 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jot Workspace — $20/month</title>
   <meta name="description" content="Jot Workspace — full platform. Crew chat, notes, recordings. $20/month." />
-  <meta name="theme-color" content="#1c1c1e" />
+  <meta name="theme-color" content="#0c0303" />
   <meta property="og:image" content="https://parthha12.github.io/assets/jot-workspace-screenshot.png" />
   <link rel="icon" href="assets/jot-icon-512.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="arise/theme.css" />
+  <link rel="stylesheet" href="arise/booking.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <main class="page">
-    <p><a href="index.html">← Jot</a></p>
-    <h1>Jot Workspace</h1>
-    <p class="hl">Download for <mark><strong>$20/month</strong></mark>.</p>
-    <p>
-      Full platform: Jot crew chat, notes library,
-      screen &amp; camera recordings, and context-aware resurfacing.
-    </p>
+  <header class="hero sub dark-fallback" id="top">
+    <canvas class="silk silk-fade" data-silk="crimson" data-seed="6" data-scale="1.7" data-angle="0.6" data-waves="2.8" aria-hidden="true"></canvas>
+    <div class="hero-top">
+      <nav class="hero-nav rise" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#crew">Crew</a></li>
+          <li><a href="reminders.html">Reminders</a></li>
+          <li><a href="#subscribe">Subscribe</a></li>
+        </ul>
+      </nav>
+      <a class="hero-brand" href="index.html">Jot</a>
+      <a class="btn-talk" href="#subscribe">$20/month</a>
+    </div>
+    <div class="hero-mid">
+      <div class="hero-tag">
+        <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 1.5 1.5 10.5M1.5 4v6.5H8" /></svg>
+        <p>Jot Workspace. The full platform — crew chat, notes, and recordings. $20/month.</p>
+      </div>
+    </div>
+    <h1 class="mark mark-in" data-fit><span>$20</span></h1>
+    <div class="hero-bar">
+      <a href="#subscribe">Subscribe</a>
+      <time class="clock" data-clock> </time>
+      <span>Local-first · macOS</span>
+    </div>
+  </header>
 
-    <figure class="hero-shot">
-      <img src="assets/jot-workspace-screenshot.png" alt="Workspace — folders, notes list, and J·O·T crew sidebar" width="1024" height="746" />
-      <figcaption>Three panels you can resize — library + crew on one Mac.</figcaption>
-    </figure>
-
-    <h2>Subscribe</h2>
-    <p>
-      <a class="btn"
-         href="https://github.com/parthha12/jot-releases/issues/new?title=Jot%20Workspace%20subscribe%20%2420%2Fmonth&body=I%20want%20to%20subscribe%20to%20Jot%20Workspace%20(%2420%2Fmonth).%0A%0AGitHub%20username%3A%20">
-        Get Workspace — $20/month
-      </a>
-    </p>
-    <p class="meta">Open a subscribe request — you’ll get the download after payment is set up.</p>
-
-    <h2>What’s included</h2>
-    <ul>
-      <li>Crew chat (<kbd>⌘⇧P</kbd>) — organize, interact, resurface</li>
-      <li>Notes library with folders, search, and light/dark theme</li>
-      <li>Screen &amp; camera recordings</li>
-      <li>Local-first on your Mac</li>
-    </ul>
-
-    <p>
-      Just need reminders?
-      <a href="reminders.html"><strong>J.O.T. Reminders</strong> — download free</a>.
-      Or <a href="index.html#crew">try the crew</a> first.
-    </p>
+  <main>
+    <section class="about" aria-labelledby="ws-title">
+      <div class="wrap">
+        <span class="eyebrow">What’s included</span>
+        <h2 class="statement" id="ws-title">Folders, notes, and the Jot crew in one window.</h2>
+        <div class="about-img wide">
+          <img src="assets/jot-workspace-screenshot.png" alt="Workspace — folders, notes list, and Jot crew sidebar" width="1024" height="746" />
+        </div>
+        <p class="lede">Crew chat with ⌘⇧P. A notes library with search. Screen and camera recordings. The same local policy as Reminders.</p>
+      </div>
+    </section>
   </main>
+
+  <section class="book" id="subscribe" aria-labelledby="book-title">
+    <div class="book-wrap">
+      <div class="book-copy">
+        <span class="book-kicker">Subscribe</span>
+        <h2 class="book-title" id="book-title">Workspace is $20/month</h2>
+        <p class="book-sub">Open a subscribe request. You get the download after payment is set up.</p>
+        <ul class="book-points">
+          <li>Crew chat — organize, interact, resurface</li>
+          <li>Notes library, folders, search, light and dark</li>
+          <li>Screen and camera recordings</li>
+        </ul>
+      </div>
+      <div class="book-embed">
+        <div class="choices">
+          <a class="choice" href="https://github.com/parthha12/jot-releases/issues/new?title=Jot%20Workspace%20subscribe%20%2420%2Fmonth&amp;body=I%20want%20to%20subscribe%20to%20Jot%20Workspace%20(%2420%2Fmonth).%0A%0AGitHub%20username%3A%20">
+            <b>Get Workspace — $20/month</b>
+            <span>Opens a subscribe request on GitHub</span>
+          </a>
+          <a class="choice" href="reminders.html">
+            <b>Just reminders?</b>
+            <span>J.O.T. Reminders is free</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer dark-fallback">
+    <canvas class="silk" data-silk="ember" data-seed="5" data-scale="1.2" data-angle="-0.6" data-waves="3" aria-hidden="true"></canvas>
+    <div class="fcard">
+      <div class="ftop">
+        <div>
+          <h2 class="ftitle">The full crew.</h2>
+          <p class="fcopy">© <span data-year>2026</span> Jot. $20/month.</p>
+        </div>
+        <nav class="flinks" aria-label="Footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reminders.html">J.O.T. Reminders</a></li>
+            <li><a href="index.html#crew">Try the crew</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://github.com/parthha12/jot-releases/releases/latest">Releases</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="mark fmark" data-fit aria-hidden="true"><span>Jot</span></p>
+    </div>
+  </footer>
+  <script src="arise/motion.js"></script>
+  <script src="arise/silk.js"></script>
+  <script src="arise/theme.js"></script>
 </body>
 </html>

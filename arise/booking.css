@@ -1,0 +1,86 @@
+/*
+  Booking section: Calendly inline embed, with an on-brand placeholder calendar until a link is set.
+  Themes restyle it by setting these on .book:
+    --bk-bg, --bk-text, --bk-muted, --bk-card, --bk-line, --bk-accent, --bk-accent-soft,
+    --bk-accent-text, --bk-radius, --bk-title-weight, --bk-pad
+  and pass colours to Calendly (hex without #): --bk-cal-bg, --bk-cal-text, --bk-cal-primary
+*/
+.book {
+  position: relative;
+  padding: var(--bk-pad, clamp(72px, 9vw, 120px) 0);
+  background: var(--bk-bg, transparent);
+  color: var(--bk-text, #111);
+  scroll-margin-top: 20px;
+}
+.book-wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr); gap: clamp(28px, 5vw, 64px); align-items: start; width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 48px); }
+.book-kicker { display: inline-block; margin-bottom: 14px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bk-accent, #111); }
+.book-title { margin: 0; font-weight: var(--bk-title-weight, 500); font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; letter-spacing: -0.03em; }
+.book-sub { margin: 16px 0 0; font-size: 16px; line-height: 1.6; color: var(--bk-muted, #666); }
+.book-points { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 12px; }
+.book-points li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; }
+.book-points li::before { content: ''; flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--bk-accent-soft, #eee) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.4 8.7 13l5.3-6' fill='none' stroke='%23888' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat; box-shadow: inset 0 0 0 1px var(--bk-line, #ddd); }
+
+.book-embed { min-width: 0; }
+.book-embed .calendly-inline-widget { min-width: 320px; height: 700px; border-radius: var(--bk-radius, 16px); overflow: hidden; }
+.book-note { margin: 12px 2px 0; font-size: 12px; color: var(--bk-muted, #777); }
+
+/* The floating "Book a call" bar steps aside while the calendar is on screen */
+body.book-in-view .sticky-cta.show { transform: translate(-50%, 160%); pointer-events: none; }
+
+/* ------------------------------------------------------------------ */
+/* Placeholder calendar, laid out like Calendly's booking page         */
+/* ------------------------------------------------------------------ */
+.bk-cal { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr); min-height: 520px; border-radius: var(--bk-radius, 16px); background: var(--bk-card, #fff); border: 1px solid var(--bk-line, #e5e5e5); overflow: hidden; color: var(--bk-text, #111); box-shadow: 0 30px 60px -44px rgba(0, 0, 0, 0.55); }
+.bk-info { padding: 26px 24px; border-right: 1px solid var(--bk-line, #e5e5e5); }
+.bk-av { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 16px; background: var(--bk-accent, #111); color: var(--bk-accent-text, #fff); }
+.bk-host { margin: 16px 0 4px; font-size: 14px; font-weight: 600; color: var(--bk-muted, #666); }
+.bk-event { margin: 0 0 18px; font-size: 22px; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+.bk-meta { display: flex; align-items: flex-start; gap: 10px; margin: 10px 0; font-size: 14px; font-weight: 500; color: var(--bk-muted, #666); }
+.bk-meta svg { flex: none; width: 18px; height: 18px; margin-top: 1px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.bk-desc { margin: 18px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--bk-muted, #666); }
+
+.bk-pick { display: grid; grid-template-columns: minmax(0, 1fr); padding: 26px 24px; }
+.bk-pick h3 { margin: 0 0 18px; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.bk-calcol { width: 100%; max-width: 400px; }
+.bk-month { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 14px; font-size: 15px; font-weight: 500; white-space: nowrap; }
+.bk-month button { width: 34px; height: 34px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--bk-accent-soft, #eee); color: var(--bk-accent, #111); cursor: pointer; }
+.bk-month button:disabled { background: none; color: var(--bk-muted, #999); opacity: 0.45; cursor: default; }
+.bk-month svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bk-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; text-align: center; }
+.bk-dow { padding: 6px 0; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: var(--bk-muted, #777); }
+.bk-day { position: relative; aspect-ratio: 1; max-width: 46px; width: 100%; margin: 0 auto; border: 0; border-radius: 50%; display: grid; place-items: center; background: none; font: inherit; font-size: 14px; color: var(--bk-muted, #999); opacity: 0.55; }
+.bk-day.open { background: var(--bk-accent-soft, #eee); color: var(--bk-accent, #111); font-weight: 700; opacity: 1; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.bk-day.open:hover { background: var(--bk-accent, #111); color: var(--bk-accent-text, #fff); }
+.bk-day.on { background: var(--bk-accent, #111); color: var(--bk-accent-text, #fff); }
+.bk-day.today::after { content: ''; position: absolute; bottom: 5px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: currentColor; }
+.bk-tz { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; color: var(--bk-muted, #777); }
+.bk-tz svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; }
+
+/* Times sit under the calendar, and move beside it when the card is wide enough */
+.bk-cal { container-type: inline-size; }
+.bk-times { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--bk-line, #e5e5e5); }
+.bk-times p { margin: 6px 0 12px; font-size: 14px; font-weight: 500; }
+.bk-slots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@container (min-width: 900px) {
+  .bk-pick { grid-template-columns: minmax(0, 1fr) 200px; column-gap: 24px; }
+  .bk-pick h3 { grid-column: 1 / -1; }
+  .bk-calcol { grid-column: 1; grid-row: 2; }
+  .bk-tz { grid-column: 1; grid-row: 3; }
+  .bk-times { grid-column: 2; grid-row: 2 / span 2; margin-top: 0; padding-top: 0; border-top: 0; }
+  .bk-slots { grid-template-columns: minmax(0, 1fr); max-height: 330px; overflow-y: auto; padding-right: 4px; }
+}
+.bk-slot { display: flex; gap: 6px; }
+.bk-slot button { flex: 1; height: 44px; border-radius: calc(var(--bk-radius, 16px) * 0.35); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s, color 0.2s, flex 0.25s; }
+.bk-slot .t { border: 1px solid var(--bk-accent, #111); background: none; color: var(--bk-accent, #111); }
+.bk-slot .t:hover { box-shadow: inset 0 0 0 1px var(--bk-accent, #111); }
+.bk-slot.on .t { background: var(--bk-muted, #666); border-color: var(--bk-muted, #666); color: var(--bk-card, #fff); }
+.bk-slot .go { display: none; border: 0; background: var(--bk-accent, #111); color: var(--bk-accent-text, #fff); }
+.bk-slot.on .go { display: block; }
+
+@media (max-width: 980px) {
+  .book-wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .bk-cal { grid-template-columns: 1fr; }
+  .bk-info { border-right: 0; border-bottom: 1px solid var(--bk-line, #e5e5e5); }
+}
