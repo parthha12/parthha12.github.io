@@ -2,129 +2,262 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Parth Harish</title>
-  <meta name="description" content="Parth Harish — machine learning and software engineer. M.S. Data Science at Harvard, B.S. CS and Statistics at Carnegie Mellon." />
-  <meta property="og:title" content="Parth Harish" />
-  <meta property="og:description" content="Machine learning and software engineer. Building Jot, a local-first AI secretary." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parth Harish | Software Engineer</title>
+  <meta name="theme-color" content="#F3F5F4" />
+  <meta name="description" content="Parth Harish builds AI agents and ML systems. M.S. Data Science at Harvard; previously Amazon, SelectorAI, and MIAX Exchange." />
+  <meta property="og:title" content="Parth Harish | Software Engineer" />
+  <meta property="og:description" content="AI agents and ML systems. M.S. Data Science at Harvard. Building Jot, a local-first AI secretary." />
   <meta property="og:url" content="https://parthha12.github.io/" />
-  <meta property="og:image" content="https://parthha12.github.io/jot/assets/jot-workspace-screenshot.png?v=20261002" />
-  <link rel="icon" href="jot/assets/jot-icon-512.png" />
+  <meta property="og:image" content="https://parthha12.github.io/assets/projects/jot.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316213A'/%3E%3Crect x='6' y='6' width='9' height='9' fill='%23F3F5F4'/%3E%3Crect x='17' y='6' width='9' height='9' fill='%23556077'/%3E%3Crect x='6' y='17' width='9' height='9' fill='%23556077'/%3E%3Crect x='17' y='17' width='9' height='9' fill='%230B6F68'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Parth Harish",
+    "jobTitle": "Software Engineer",
+    "email": "pah160@g.harvard.edu",
+    "url": "https://parthha12.github.io/",
+    "image": "https://parthha12.github.io/assets/dp.jpg",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Harvard University" },
+      { "@type": "CollegeOrUniversity", "name": "Carnegie Mellon University" }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/parth-harish",
+      "https://github.com/parthha12",
+      "https://x.com/parthhar04"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <header class="intro">
-      <h1>Parth Harish</h1>
-      <p class="lede">
-        Machine learning and software engineer. M.S. Data Science at Harvard, previously
-        B.S. Computer Science and Statistics at Carnegie Mellon. I build LLM agents,
-        evaluation tooling, and ML systems that run in production.
-      </p>
-      <nav class="links" aria-label="Contact">
-        <a href="mailto:pah160@g.harvard.edu">Email</a>
-        <a href="https://linkedin.com/in/parth-harish">LinkedIn</a>
-        <a href="https://github.com/parthha12">GitHub</a>
-        <a href="https://x.com/parthhar04">X</a>
+  <header class="topbar">
+    <div class="topbar__inner container">
+      <a class="topbar__name" href="#about">Parth Harish</a>
+      <nav aria-label="Sections">
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section aria-labelledby="projects">
-      <h2 id="projects">Projects</h2>
+  <main>
+    <section id="about" class="hero container">
+      <img class="avatar" src="assets/dp.jpg?v=2" alt="Parth Harish" width="132" height="132" />
+      <div>
+        <h1 class="hero__name">Parth Harish</h1>
+        <p class="hero__role">Software Engineer · M.S. Data Science at Harvard</p>
+        <ul class="hero__links">
+          <li><a href="mailto:pah160@g.harvard.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/parth-harish" target="_blank" rel="me noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/parthha12" target="_blank" rel="me noopener noreferrer">GitHub</a></li>
+          <li><a href="https://x.com/parthhar04" target="_blank" rel="me noopener noreferrer">X</a></li>
+        </ul>
+      </div>
+    </section>
 
-      <article class="project">
-        <a class="shot" href="jot/">
-          <img src="jot/assets/jot-workspace-screenshot.png?v=20261002" alt="Jot Workspace app showing notes and the crew chat" loading="lazy" />
-        </a>
-        <div>
-          <h3><a href="jot/">Jot</a> <span class="meta">AI Secretary · Jan 2026 – Present</span></h3>
-          <p>
-            A local-first AI secretary that captures notes and on-screen context, then resurfaces them
-            through deterministic triggers on app state, time, and activity, keeping all data on-device.
-          </p>
-          <p>
-            Multi-agent architecture with MCP-style tool orchestration that routes requests to specialized
-            agents for extraction, recall, reminders, and search behind one chat interface.
-          </p>
-          <p class="tags">Electron · Rust · LLM agents · MCP</p>
-          <p class="actions">
-            <a href="jot/">Product site</a>
-            <a href="jot/reminders.html">J.O.T. Reminders (free)</a>
-            <a href="https://github.com/parthha12/jot-releases/releases/latest">Download for macOS</a>
-          </p>
+    <section class="block container" aria-labelledby="bio-title">
+      <h2 id="bio-title" class="block__title">Biography</h2>
+      <div class="block__body">
+        <p class="prose">
+          Parth Harish is a software engineer at <strong>RegKeyAI</strong>, building agents that draft FDA submissions,
+          and an <strong>M.S. Data Science</strong> student at Harvard. Before that he was a machine learning engineer
+          at <strong>SelectorAI</strong> and <strong>Amazon</strong>, working on network traffic models and LLM evaluation for Alexa.
+        </p>
+        <p class="prose">
+          He earned his <strong>B.S. in Computer Science and Statistics</strong> from Carnegie Mellon University and earlier
+          interned at <strong>MIAX Exchange</strong> on high-throughput options market data. Outside of work, he is building
+          <strong>Jot</strong>, a local-first AI secretary with multi-agent tool routing and proactive memory.
+        </p>
+
+        <div class="facts">
+          <div>
+            <h3 class="facts__title">Interests</h3>
+            <ul class="facts__list">
+              <li>AI Agents &amp; MCP</li>
+              <li>Machine Learning Systems</li>
+              <li>LLM Evaluation &amp; RAG</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="facts__title">Education</h3>
+            <ul class="facts__list">
+              <li><strong>Harvard University</strong><span>M.S. Data Science</span></li>
+              <li><strong>Carnegie Mellon University</strong><span>B.S. Computer Science &amp; Statistics</span></li>
+            </ul>
+          </div>
         </div>
-      </article>
-
-      <article class="project">
-        <div>
-          <h3><a href="https://github.com/parthha12/parthha12.github.io">Portfolio Website</a> <span class="meta">Oct 2026</span></h3>
-          <p>
-            This site: a static, dependency-free personal site on GitHub Pages that also hosts the Jot
-            product hub under <code>/jot</code>, published from the Jot monorepo by a deploy script.
-          </p>
-          <p class="tags">HTML · CSS · GitHub Pages</p>
-        </div>
-      </article>
+      </div>
     </section>
 
-    <section aria-labelledby="experience">
-      <h2 id="experience">Experience</h2>
+    <section id="projects" class="block container" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="block__title">Projects</h2>
+      <div class="block__body">
+        <ul class="projects">
+          <li class="project">
+            <div class="project__text">
+              <div class="project__head">
+                <h3 class="project__name">Jot</h3>
+                <p class="project__meta">2026 – Present · Founder</p>
+              </div>
+              <p class="project__tagline">Capture anything. Get it back when it matters.</p>
+              <p class="project__desc">
+                A local-first Mac AI secretary that brings the right note back when the right app, time, or context comes up.
+                A deterministic Rust policy engine decides when to interrupt, with no LLM on the hot path.
+              </p>
+              <ul class="tags" aria-label="Stack">
+                <li>Electron</li><li>Rust</li><li>SQLite</li><li>Multi-agent</li>
+              </ul>
+              <ul class="project__links">
+                <li><a href="https://parthha12.github.io/jot/" target="_blank" rel="noopener noreferrer">Website</a></li>
+                <li><a href="https://github.com/parthha12/jot-releases/releases/latest" target="_blank" rel="noopener noreferrer">Download for macOS</a></li>
+              </ul>
+            </div>
+            <a class="project__media" href="https://parthha12.github.io/jot/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/projects/jot.png?v=2" alt="Jot workspace with notes, folders, and the J·O·T crew panel" width="924" height="676" loading="lazy" />
+            </a>
+          </li>
 
-      <article class="role">
-        <h3>RegKeyAI <span class="meta">Software Engineer · Princeton, NJ · July 2026 – Present</span></h3>
-        <ul>
-          <li>Template-driven agent that drafts FDA submission sections such as Clinical Study Reports with RAG over source documents, tuned with medical-writer feedback across Phase I–III programs.</li>
-          <li>Multi-agent regulatory search services over drug labels, clinical trials, and medical devices, deployed on AWS and exposed to writers through MCP tools.</li>
-        </ul>
-      </article>
+          <li class="project">
+            <div class="project__text">
+              <div class="project__head">
+                <h3 class="project__name">New Roots Care OS</h3>
+                <p class="project__meta">2026 · Client build</p>
+              </div>
+              <p class="project__tagline">One shift inbox for a children’s residential care provider.</p>
+              <p class="project__desc">
+                Care records, house checks, petty cash, rota, and recruitment share one action list and an append-only
+                audit trail, with role-scoped access and authenticator sign-in for senior staff.
+              </p>
+              <ul class="tags" aria-label="Stack">
+                <li>Next.js</li><li>TypeScript</li><li>Postgres</li><li>Prisma</li>
+              </ul>
+              <ul class="project__links">
+                <li><a href="projects/new-roots.html">See screens</a></li>
+              </ul>
+              <p class="project__note">Private repository</p>
+            </div>
+            <a class="project__media" href="projects/new-roots.html">
+              <img src="assets/projects/new-roots/thumb.png" alt="New Roots shift inbox listing overdue checks" width="960" height="600" loading="lazy" />
+            </a>
+          </li>
 
-      <article class="role">
-        <h3>SelectorAI <span class="meta">Machine Learning Engineer · Santa Clara, CA · Jan 2026 – June 2026</span></h3>
-        <ul>
-          <li>End-to-end ML pipeline for internet and VPN traffic classification, with XGBoost baselines and feature engineering over BGP routing and prefix-churn signals.</li>
-          <li>Lightweight ~5 KB MLP reaching ~99% predictive accuracy for low-overhead production inference on large-scale network traffic.</li>
+          <li class="project">
+            <div class="project__text">
+              <div class="project__head">
+                <h3 class="project__name">MediQuery</h3>
+                <p class="project__meta">2026 · Prototype</p>
+              </div>
+              <p class="project__tagline">One medication list that follows the patient.</p>
+              <p class="project__desc">
+                Merges discharge packets from hospitals, rehab, and home health into one medication list and flags where
+                sources disagree, linked to the exact line in each original document.
+              </p>
+              <ul class="tags" aria-label="Stack">
+                <li>Next.js</li><li>TypeScript</li><li>pdf.js</li><li>RAG</li>
+              </ul>
+              <ul class="project__links">
+                <li><a href="projects/mediquery.html">See screens</a></li>
+              </ul>
+              <p class="project__note">Private repository · demo data only</p>
+            </div>
+            <a class="project__media" href="projects/mediquery.html">
+              <img src="assets/projects/mediquery/2.png" alt="MediQuery intake board with demo patients and medication conflicts" width="1600" height="900" loading="lazy" />
+            </a>
+          </li>
         </ul>
-      </article>
 
-      <article class="role">
-        <h3>Amazon <span class="meta">Machine Learning Engineer · Boston, MA · Summer 2024, July 2025 – Dec 2025</span></h3>
-        <ul>
-          <li>Features for LEAF, Amazon's internal language model evaluation framework, which runs, scores, and compares Alexa LLM outputs asynchronously to benchmark model quality at scale.</li>
-          <li>Evaluation and observability tooling for Alexa LLM systems that translate natural-language requests into executable API calls, using service traces to debug model behavior.</li>
+        <h3 class="minor__title">Smaller work</h3>
+        <ul class="minor">
+          <li><p class="minor__name">Video RAG</p><p class="minor__desc">Local video Q&amp;A with timestamp citations.</p></li>
+          <li><p class="minor__name">Adaptive Re-Anchoring</p><p class="minor__desc">World-model agents that learn when to re-observe.</p></li>
+          <li><a class="minor__name" href="https://github.com/parthha12/bb-hud" target="_blank" rel="noopener noreferrer">bb-hud</a><p class="minor__desc">Real-time poker OCR overlay.</p></li>
+          <li><a class="minor__name" href="https://github.com/parthha12/scrna-knowledge" target="_blank" rel="noopener noreferrer">scRNA knowledge</a><p class="minor__desc">Single-cell RNA-seq field guide.</p></li>
         </ul>
-      </article>
-
-      <article class="role">
-        <h3>MIAX Exchange <span class="meta">Software Engineering Intern · Princeton, NJ · Summer 2023</span></h3>
-        <ul>
-          <li>Wrote and optimized exchange software that processes high-throughput, real-time options market data, close to order flow and latency-sensitive trading infrastructure.</li>
-          <li>Data pipelines and analysis tools to parse, transform, and study large-scale options market datasets for quantitative and operations teams.</li>
-        </ul>
-      </article>
+      </div>
     </section>
 
-    <section aria-labelledby="education">
-      <h2 id="education">Education</h2>
-      <article class="role">
-        <h3>Harvard University <span class="meta">M.S. Data Science · Sept 2026 – Present</span></h3>
-      </article>
-      <article class="role">
-        <h3>Carnegie Mellon University <span class="meta">B.S. Computer Science and Statistics · June 2025</span></h3>
-      </article>
+    <section id="experience" class="block container" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="block__title">Experience</h2>
+      <div class="block__body">
+        <ul class="timeline">
+          <li>
+            <div class="timeline__head"><h3>RegKeyAI</h3><span>July 2026 – Present</span></div>
+            <p class="timeline__role">Software Engineer · Princeton, NJ</p>
+            <p class="timeline__desc">Agents that draft FDA submission sections with RAG over source documents; regulatory search exposed to writers through MCP tools.</p>
+          </li>
+          <li>
+            <div class="timeline__head"><h3>SelectorAI</h3><span>Jan 2026 – June 2026</span></div>
+            <p class="timeline__role">Machine Learning Engineer · Santa Clara, CA</p>
+            <p class="timeline__desc">Internet and VPN traffic classification pipeline; a ~5 KB MLP at ~99% accuracy for low-overhead production inference.</p>
+          </li>
+          <li>
+            <div class="timeline__head"><h3>Amazon</h3><span>Summer 2024, July 2025 – Dec 2025</span></div>
+            <p class="timeline__role">Machine Learning Engineer · Boston, MA</p>
+            <p class="timeline__desc">Features for LEAF, Amazon’s LLM evaluation framework, plus observability tooling for Alexa LLM systems.</p>
+          </li>
+          <li>
+            <div class="timeline__head"><h3>MIAX Exchange</h3><span>Summer 2023</span></div>
+            <p class="timeline__role">Software Engineering Intern · Princeton, NJ</p>
+            <p class="timeline__desc">Exchange software for high-throughput, real-time options market data, and pipelines for options datasets.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section aria-labelledby="skills">
-      <h2 id="skills">Skills</h2>
-      <p><strong>Languages &amp; stack:</strong> Python, C/C++, Java, TypeScript, SQL, HTML/CSS, React, Node.js, Express, PHP, MySQL</p>
-      <p><strong>AI, ML &amp; infra:</strong> PyTorch, XGBoost, RAG, MCP, LLM benchmarking, AWS, Docker, Kubernetes, Linux, Git, Bash</p>
+    <section id="education" class="block container" aria-labelledby="education-title">
+      <h2 id="education-title" class="block__title">Education</h2>
+      <div class="block__body">
+        <ul class="timeline">
+          <li>
+            <div class="timeline__head"><h3>Harvard University</h3><span>Sept 2026 – Present</span></div>
+            <p class="timeline__role">M.S. Data Science · Cambridge, MA</p>
+          </li>
+          <li>
+            <div class="timeline__head"><h3>Carnegie Mellon University</h3><span>June 2025</span></div>
+            <p class="timeline__role">B.S. Computer Science and Statistics · Pittsburgh, PA</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2026 Parth Harish · <a href="mailto:pah160@g.harvard.edu">pah160@g.harvard.edu</a></p>
-    </footer>
+    <section id="contact" class="block container" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="block__title">Contact</h2>
+      <div class="block__body">
+        <p class="prose">Email is the best way to get in touch: <a class="inline" href="mailto:pah160@g.harvard.edu">pah160@g.harvard.edu</a>.</p>
+        <ul class="hero__links">
+          <li><a href="https://www.linkedin.com/in/parth-harish" target="_blank" rel="me noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/parthha12" target="_blank" rel="me noopener noreferrer">GitHub</a></li>
+          <li><a href="https://x.com/parthhar04" target="_blank" rel="me noopener noreferrer">X</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer container">© 2026 Parth Harish</footer>
+
+  <script>
+    const links = [...document.querySelectorAll('.nav a')];
+    const byId = new Map(links.map((a) => [a.hash.slice(1), a]));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((a) => a.removeAttribute('aria-current'));
+        byId.get(entry.target.id)?.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    byId.forEach((_, id) => observer.observe(document.getElementById(id)));
+  </script>
 </body>
 </html>
